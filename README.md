@@ -1,2 +1,3 @@
-# plenum.github.io
-Company website.
+# Corporate Landing Page of Plenum Inc.
+
+Built with Next.js.
