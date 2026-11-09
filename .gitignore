@@ -1,8 +1,23 @@
-# node
-node_modules
+# Dependencies and local Yarn state
+node_modules/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+.yarn/build-state.yml
+.pnp.*
 
-# NextJS
-.next
+# Next.js build output and TypeScript cache
+.next/
+/out/
+*.tsbuildinfo
+
+# Local environment variables (example files can be committed)
+.env*
+!.env*.example
+
+# Test output and logs
+/coverage/
+*.log
 
 # misc
 .DS_STORE

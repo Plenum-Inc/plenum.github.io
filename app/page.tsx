@@ -1,13 +1,13 @@
 import About from '@/components/About';
-import Contact from '@/components/Contact';
 import Product from '@/components/Product';
+import Vision from '@/components/Vision';
 
 export default function Home() {
   return (
-    <>
-      <About />
+    <main>
+      <Vision />
       <Product />
-      <Contact />
-    </>
-  )
+      <About />
+    </main>
+  );
 }
