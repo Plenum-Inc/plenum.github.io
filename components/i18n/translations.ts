@@ -15,7 +15,7 @@ export const translations = {
       {
         title: ['録画ひとつで', '業務アクションをAIネイティブ化'],
         highlight: '録画ひとつ',
-        description: '現場社員が面倒に感じた業務のPC録画を提出すると、AIエージェント向けのツールコードを自動生成。APIが存在しないレガシーシステムの操作や、システムを跨ぐ複雑な業務フローなど、あらゆるPC業務に対応。',
+        description: '現場社員が面倒に感じた業務のPC録画を提出すると、AIエージェント向けのツールコードを自動生成。APIが存在しないレガシーシステムの操作や、システムを跨ぐ複雑な業務フローなど、幅広いPC業務に対応。',
       },
       {
         title: ['セキュリティと安全性に', '最大限配慮した設計'],
@@ -57,7 +57,7 @@ export const translations = {
       {
         title: ['One recording.', 'AI-native work actions.'],
         highlight: 'One recording',
-        description: 'When employees submit a PC recording of a tedious task, automatically generate tool code for AI agents. Support any PC workflow, including legacy systems without APIs and complex workflows that span multiple systems.',
+        description: 'When employees submit a PC recording of a tedious task, automatically generate tool code for AI agents. Support a wide range of PC workflows, including legacy systems without APIs and complex workflows that span multiple systems.',
       },
       {
         title: ['Security and safety,', 'by design.'],
