@@ -48,26 +48,26 @@ export const translations = {
     language: 'Display language',
     sections: { vision: 'Our Vision', products: 'Our Products', team: 'Our Team' },
     productDescription: {
-      intro: 'Your people know their work best.',
-      detail: 'A no-code AX solution. No engineering experience required.',
+      intro: 'Employees know their own work best.',
+      detail: 'A no-code platform that helps anyone put AI agents to work.',
       solution: '',
     },
     featuresTitle: 'Three key features',
     features: [
       {
-        title: ['One recording.', 'AI-native work actions.'],
-        highlight: 'One recording',
-        description: 'When employees submit a PC recording of a tedious task, automatically generate tool code for AI agents. Support a wide range of PC workflows, including legacy systems without APIs and complex workflows that span multiple systems.',
+        title: ['Turn a single recording', 'into tools for AI agents'],
+        highlight: 'single recording',
+        description: 'Employees submit a screen recording of a tedious task. Hydrangea automatically generates tools for AI agents, supporting a wide range of desktop workflows, from legacy systems without APIs to complex processes across multiple systems.',
       },
       {
-        title: ['Security and safety,', 'by design.'],
+        title: ['Security and safety', 'built in'],
         highlight: 'Security and safety',
-        description: 'Sensitive information in work recordings is masked locally on the user’s PC. Generated tool code runs in an environment isolated from work PCs and improves itself using execution success and failure logs.',
+        description: 'Sensitive information in recordings is masked locally on the employee’s PC. Generated tools run in an isolated environment separate from work PCs. Logs of successful and failed runs help improve the code over time.',
       },
       {
-        title: ['Bring AI agents to work,', '10 times faster.'],
+        title: ['Roll out AI agents', '10 times faster'],
         highlight: '10 times faster',
-        description: 'Accelerate workflow discovery and connections to internal systems when adopting AI agents. Address IT teams’ concerns while significantly reducing the workload for AX teams and FDE organizations, and maximize AI ROI sooner.',
+        description: 'Identify suitable workflows and connect internal systems faster. Hydrangea helps address IT teams’ concerns and reduces implementation work for AI transformation teams and forward-deployed engineers, so you can get more value from your AI investment sooner.',
       },
     ],
     demo: {
