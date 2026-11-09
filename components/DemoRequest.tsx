@@ -25,8 +25,6 @@ export default function DemoRequest() {
   useEffect(() => () => pending.current?.abort(), []);
 
   function open() {
-    setError(false);
-    setSent(false);
     dialog.current?.showModal();
     setIsOpen(true);
   }
@@ -37,7 +35,7 @@ export default function DemoRequest() {
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (pending.current) return;
+    if (pending.current || sent) return;
     const form = event.currentTarget;
     const data = new FormData(form);
     const controller = new AbortController();
@@ -55,10 +53,8 @@ export default function DemoRequest() {
         website: String(data.get('website') ?? ''),
       }, controller.signal);
       setSent(true);
-      form.reset();
-      dialog.current?.close();
     } catch {
-      // Keep the form and its values available for a retry.
+      // Preserve the input so a failed request can be corrected and retried.
       setError(true);
     } finally {
       clearTimeout(timeout);
@@ -72,7 +68,6 @@ export default function DemoRequest() {
       <button ref={opener} type="button" className="primary-button demo-request-button" onClick={open}>
         {text.button}
       </button>
-      <p className="demo-success" role="status">{sent ? text.success : ''}</p>
       <dialog
         ref={dialog}
         className="demo-modal"
@@ -88,7 +83,7 @@ export default function DemoRequest() {
             <button type="button" className="modal-close" aria-label={text.close} onClick={close} disabled={sending}>×</button>
           </div>
           <form onSubmit={submit} aria-busy={sending}>
-            <fieldset disabled={sending} className="demo-fields">
+            <fieldset disabled={sending || sent} className="demo-fields">
               <label htmlFor="demo-name">{text.name}
                 <input id="demo-name" name="name" autoComplete="name" required maxLength={100} autoFocus />
               </label>
@@ -104,9 +99,10 @@ export default function DemoRequest() {
               <div className="form-honeypot" aria-hidden="true">
                 <label htmlFor="demo-website">Website<input id="demo-website" name="website" tabIndex={-1} autoComplete="off" /></label>
               </div>
-              {error && <p className="form-error" role="alert">{text.error}</p>}
               <button type="submit" className="primary-button form-submit">{sending ? text.sending : text.send}</button>
             </fieldset>
+            <p className="demo-success" role="status">{sent ? text.success : ''}</p>
+            <p className="form-error" role="alert">{error ? text.error : ''}</p>
             <p id="demo-note" className="demo-note">{text.note}</p>
           </form>
         </div>

@@ -40,7 +40,7 @@ export const translations = {
       close: '閉じる',
       note: 'ご入力いただいたメールアドレス宛に、3営業日以内にご連絡差し上げます。',
       success: 'お問い合わせを受け付けました。3営業日以内にご連絡差し上げます。',
-      error: '送信できませんでした。時間をおいて再度お試しいただくか、contact@plenum.co.jpへ直接ご連絡ください。',
+      error: '送信できませんでした。再度お試しいただくか、contact@plenum.co.jpへ直接ご連絡ください。',
     },
   },
   en: {
@@ -82,7 +82,7 @@ export const translations = {
       close: 'Close',
       note: 'We will contact you at the email address provided within three business days.',
       success: 'Thank you for your inquiry. We will contact you within three business days.',
-      error: 'Your message could not be sent. Please try again later or email contact@plenum.co.jp directly.',
+      error: 'Your message could not be sent. Please try again or email contact@plenum.co.jp directly.',
     },
   },
 };
